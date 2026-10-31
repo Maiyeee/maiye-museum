@@ -67,3 +67,39 @@
   .raster-work figcaption { flex-wrap: wrap; font-size: 8px; }
   .raster-summary dd { font-size: 11px; }
 }
+
+/* The Vector Graphics room preserves every original composition. */
+.artwork.vector-frame { aspect-ratio: 2480 / 3508; padding: 20px; background: #f1d9d6; align-items: center; }
+.vector-image { display: block; width: 100%; height: auto; object-fit: contain; }
+.vector-intro { display: grid; grid-template-columns: 1.2fr 1fr; align-items: end; gap: 9%; margin-bottom: 65px; }
+.vector-intro .eyebrow { color: var(--gold); margin-bottom: 25px; }
+.vector-intro h1 { font-size: clamp(50px, 6vw, 88px); }
+.vector-intro dl { margin: 25px 0 0; border-top: 1px solid var(--line); }
+.vector-intro dl>div { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.vector-intro dt { font-size: 9px; letter-spacing: 1px; }
+.vector-intro dd { margin: 0; text-align: right; font-size: 12px; color: var(--muted); }
+.vector-section { padding-top: 40px; border-top: 1px solid var(--line); margin-top: 65px; }
+.vector-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 35px; }
+.vector-section-heading .eyebrow { color: var(--gold); margin-bottom: 14px; }
+.vector-section-heading>p { max-width: 410px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+.vector-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 50px 40px; align-items: start; }
+.vector-work { min-width: 0; }
+.vector-work figure { margin: 0; }
+.vector-work figcaption { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 9px; margin-top: 14px; }
+.vector-work h3 { margin-top: 18px; }
+.vector-actions { display: flex; flex-wrap: wrap; gap: 10px 25px; margin-top: 10px; }
+.vector-actions .text-link { gap: 12px; }
+.vector-application-grid { margin-top: 50px; }
+.vector-application>.eyebrow { color: var(--gold); margin-bottom: 20px; }
+.vector-application>p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.9; margin: 25px 0 30px; }
+.related-exhibit { margin-top: 30px; }
+@media (max-width: 760px) {
+  .exhibit-card .artwork.vector-frame { aspect-ratio: 1 / 1.05; }
+  .vector-intro { grid-template-columns: 1fr; gap: 30px; margin-bottom: 40px; }
+  .vector-intro h1 { font-size: clamp(48px, 10vw, 70px); }
+  .vector-intro dd { font-size: 11px; }
+  .vector-section { margin-top: 40px; padding-top: 30px; }
+  .vector-section-heading { flex-direction: column; align-items: start; gap: 20px; }
+  .vector-section-heading>p { max-width: none; }
+  .vector-grid { grid-template-columns: 1fr; gap: 40px; }
+}

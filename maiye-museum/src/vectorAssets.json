@@ -1,0 +1,152 @@
+﻿{
+    "business-card-front":  {
+                                "variants":  [
+                                                 {
+                                                     "file":  "business-card-front-preview-640.jpg",
+                                                     "width":  640
+                                                 },
+                                                 {
+                                                     "file":  "business-card-front-preview-1050.jpg",
+                                                     "width":  1050
+                                                 }
+                                             ],
+                                "original":  "business-card-front.jpg",
+                                "width":  1050,
+                                "height":  600
+                            },
+    "business-card-back":  {
+                               "variants":  [
+                                                {
+                                                    "file":  "business-card-back-preview-640.jpg",
+                                                    "width":  640
+                                                },
+                                                {
+                                                    "file":  "business-card-back-preview-1050.jpg",
+                                                    "width":  1050
+                                                }
+                                            ],
+                               "original":  "business-card-back.jpg",
+                               "width":  1050,
+                               "height":  600
+                           },
+    "letterhead":  {
+                       "variants":  [
+                                        {
+                                            "file":  "letterhead-preview-640.jpg",
+                                            "width":  640
+                                        },
+                                        {
+                                            "file":  "letterhead-preview-1280.jpg",
+                                            "width":  1280
+                                        }
+                                    ],
+                       "original":  "letterhead.jpg",
+                       "width":  2480,
+                       "height":  3508
+                   },
+    "mockup":  {
+                   "variants":  [
+                                    {
+                                        "file":  "mockup-preview-640.jpg",
+                                        "width":  640
+                                    },
+                                    {
+                                        "file":  "mockup-preview-1280.jpg",
+                                        "width":  1280
+                                    }
+                                ],
+                   "original":  "mockup.jpg",
+                   "width":  6000,
+                   "height":  4500
+               },
+    "before-after":  {
+                         "variants":  [
+                                          {
+                                              "file":  "before-after-preview-640.jpg",
+                                              "width":  640
+                                          },
+                                          {
+                                              "file":  "before-after-preview-1280.jpg",
+                                              "width":  1280
+                                          }
+                                      ],
+                         "original":  "before-after.jpg",
+                         "width":  3508,
+                         "height":  2480
+                     },
+    "photo-collage":  {
+                          "variants":  [
+                                           {
+                                               "file":  "photo-collage-preview-640.jpg",
+                                               "width":  640
+                                           },
+                                           {
+                                               "file":  "photo-collage-preview-1280.jpg",
+                                               "width":  1280
+                                           }
+                                       ],
+                          "original":  "photo-collage.jpg",
+                          "width":  3508,
+                          "height":  2480
+                      },
+    "logo":  {
+                 "variants":  [
+                                  {
+                                      "file":  "logo-preview-640.jpg",
+                                      "width":  640
+                                  },
+                                  {
+                                      "file":  "logo-preview-1280.jpg",
+                                      "width":  1280
+                                  }
+                              ],
+                 "original":  "logo.pdf",
+                 "width":  2400,
+                 "height":  2400
+             },
+    "color-palette":  {
+                          "variants":  [
+                                           {
+                                               "file":  "color-palette-preview-640.jpg",
+                                               "width":  640
+                                           },
+                                           {
+                                               "file":  "color-palette-preview-1280.jpg",
+                                               "width":  1280
+                                           }
+                                       ],
+                          "original":  "color-palette.pdf",
+                          "width":  2400,
+                          "height":  2000
+                      },
+    "fonts":  {
+                  "variants":  [
+                                   {
+                                       "file":  "fonts-preview-640.jpg",
+                                       "width":  640
+                                   },
+                                   {
+                                       "file":  "fonts-preview-1280.jpg",
+                                       "width":  1280
+                                   }
+                               ],
+                  "original":  "fonts.pdf",
+                  "width":  2400,
+                  "height":  2000
+              },
+    "moodboard":  {
+                      "variants":  [
+                                       {
+                                           "file":  "moodboard-preview-640.jpg",
+                                           "width":  640
+                                       },
+                                       {
+                                           "file":  "moodboard-preview-1280.jpg",
+                                           "width":  1280
+                                       }
+                                   ],
+                      "original":  "moodboard.pdf",
+                      "width":  2400,
+                      "height":  1697
+                  }
+}
