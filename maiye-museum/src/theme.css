@@ -1,0 +1,57 @@
+/* Theme tokens keep artwork colors intact while changing the museum around them. */
+:root {
+  --paper: #f7f5ef;
+  --button-text: #f7f5ef;
+  --button-hover: #514938;
+  --selection: #ded2bb;
+  --raster-mat: #e5eadb;
+  --vector-mat: #f1d9d6;
+  color: var(--ink);
+  background: var(--paper);
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #1b1a17;
+  --ink: #eee8dc;
+  --muted: #b8af9e;
+  --line: #494339;
+  --gold: #d4b480;
+  --button-text: #1b1a17;
+  --button-hover: #ddc9a8;
+  --selection: #64543d;
+  --raster-mat: #30382d;
+  --vector-mat: #3a2b2b;
+}
+body { background: var(--paper); color: var(--ink); }
+::selection { background: var(--selection); }
+.button, .skip-link, .exhibit-card:hover .circle-arrow { color: var(--button-text); }
+.button:hover { background: var(--button-hover); }
+.navigation { background: var(--paper); }
+.menu-toggle { color: var(--ink); }
+.artwork.raster-frame { background: var(--raster-mat); }
+.artwork.vector-frame { background: var(--vector-mat); }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+.theme-toggle svg { flex-shrink: 0; }
+@media (max-width: 760px) {
+  .header-actions { margin-left: auto; gap: 8px; }
+  .menu-toggle { min-height: 40px; }
+  .theme-toggle { padding: 8px 10px; gap: 6px; }
+}
+@media (max-width: 359px) {
+  .theme-toggle span { display: none; }
+  .theme-toggle { width: 40px; }
+}

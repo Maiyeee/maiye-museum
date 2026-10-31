@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import ThemeToggle from './ThemeToggle'
 import VectorExhibit, { VectorImage } from './VectorExhibit'
 
 const exhibits = ['01', '02', '03']
@@ -163,6 +164,6 @@ function App() {
     document.title = `${title} — Maiye Museum`
   }, [route])
   const active = route.startsWith('exhibit-') ? 'collections' : route
-  return <><a href="#main-content" className="skip-link">Skip to content</a><header className="site-header shell"><a href="#home" className="wordmark" aria-label="Maiye Museum home">maiye<span>MUSEUM</span></a><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button><nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">{[['home', 'Home'], ['collections', 'Collections'], ['about', 'About']].map(([key, label]) => <a key={key} href={`#${key}`} aria-current={active === key ? 'page' : undefined}>{label}</a>)}</nav><span className="header-note">A WORLD WITHIN.</span></header><main id="main-content" tabIndex={-1}>{route === 'home' ? <Home /> : route === 'collections' ? <Collections /> : route === 'about' ? <About /> : <Exhibit number={route.slice(-2)} />}</main><footer className="site-footer shell"><a className="wordmark" href="#home">maiye<span>MUSEUM</span></a><p>A little wonder. A lasting impression.</p><span>© {new Date().getFullYear()} Maiye Museum</span><a href="#collections">Explore <Arrow /></a></footer></>
+  return <><a href="#main-content" className="skip-link">Skip to content</a><header className="site-header shell"><a href="#home" className="wordmark" aria-label="Maiye Museum home">maiye<span>MUSEUM</span></a><nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">{[['home', 'Home'], ['collections', 'Collections'], ['about', 'About']].map(([key, label]) => <a key={key} href={`#${key}`} aria-current={active === key ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><ThemeToggle /><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button></div></header><main id="main-content" tabIndex={-1}>{route === 'home' ? <Home /> : route === 'collections' ? <Collections /> : route === 'about' ? <About /> : <Exhibit number={route.slice(-2)} />}</main><footer className="site-footer shell"><a className="wordmark" href="#home">maiye<span>MUSEUM</span></a><p>A little wonder. A lasting impression.</p><span>© {new Date().getFullYear()} Maiye Museum</span><a href="#collections">Explore <Arrow /></a></footer></>
 }
 export default App

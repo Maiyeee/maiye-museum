@@ -4,6 +4,8 @@ Responsive museum website built with React and Vite. Exhibit 01 features the InD
 
 Run `npm install` then `npm run dev` locally. Build with `npm run build`; serve the output using `npm run preview`.
 
+The header theme button switches between light and dark mode. The site initially follows the device preference; an explicit choice is saved under `maiye-museum-theme` in localStorage and synchronized across tabs. If storage is unavailable, switching still works for the current page. `public/theme.js` applies the theme before first paint; `src/ThemeToggle.jsx` provides the accessible control; `src/theme.css` defines both palettes without modifying artwork colors.
+
 Routes: #home, #collections, #about, and #exhibit-01 through #exhibit-03. Browser history and direct links are supported. Mobile navigation, skip navigation, visible keyboard focus, and reduced motion are included.
 
 InDesign assets are in public/collections/indesign. Original PNGs and the PDF are preserved; 640px and 1280px JPEG renditions provide responsive images. Both layouts are displayed without cropping, with links to full-resolution originals. PDF viewing and downloading are available on #exhibit-01.
