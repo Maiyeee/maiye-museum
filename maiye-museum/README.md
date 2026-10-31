@@ -1,16 +1,9 @@
-# React + Vite
+﻿# Maiye Museum
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Responsive museum website built with React and Vite. This structure preview uses CSS image placeholders. ZIP contents have not been opened or used.
 
-Currently, two official plugins are available:
+Run `npm install` then `npm run dev` locally. Build with `npm run build`; serve the output using `npm run preview`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Routes: #home, #collections, #about, and #exhibit-01 through #exhibit-03. Browser history and direct links are supported. Mobile navigation, skip navigation, visible keyboard focus, and reduced motion are included.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Titles, captions, images, collection categories, and the full museum story await direction. Page components are in src/App.jsx; layouts are in src/App.css; shared styles are in src/index.css. Fonts use Google Fonts with local fallbacks.
