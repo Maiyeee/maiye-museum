@@ -15,3 +15,5 @@ Raster assets are in public/collections/raster. Original PNGs are preserved with
 Vector assets are in public/collections/vector. All ten originals are preserved with shorter filenames. The four single-page PDFs (logo, color palette, fonts, moodboard) have image previews rendered with Windows.Data.Pdf. Responsive JPEG previews preserve full compositions; small originals are not enlarged. Each work links to its original and download. The gold-background JPG collage is displayed separately from the green-background PNG edition in Raster Graphics. Components are in src/VectorExhibit.jsx and image metadata is in src/vectorAssets.json.
 
 Additional collection content and the full museum story await direction. Page components are in src/App.jsx; layouts are in src/App.css; shared styles are in src/index.css. Fonts use Google Fonts with local fallbacks.
+
+The homepage and About page include a shared Meet Maye introduction from src/MeetMaye.jsx. The supplied studio portrait is preserved in public/about/maye-portrait.png; 640px and 1086px JPEG copies provide responsive, uncropped images. The section uses the shared theme palette in light and dark mode.

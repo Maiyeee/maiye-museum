@@ -103,3 +103,30 @@
   .vector-section-heading>p { max-width: none; }
   .vector-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
+/* A personal introduction, with the complete supplied studio portrait. */
+.meet-maye {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+  gap: 12%;
+  align-items: center;
+  padding-block: 70px 85px;
+  border-top: 1px solid var(--line);
+}
+.meet-maye-portrait { margin: 0; }
+.meet-maye-portrait img { display: block; width: 100%; height: auto; }
+.meet-maye-portrait figcaption { display: flex; justify-content: space-between; gap: 15px; margin-top: 17px; color: var(--muted); font-size: 9px; }
+.meet-maye-portrait figcaption span:first-child { letter-spacing: 2px; color: var(--gold); }
+.meet-maye-portrait figcaption span:last-child { font-family: Georgia, serif; font-style: italic; }
+.meet-maye-copy>.eyebrow { color: var(--gold); margin-bottom: 25px; }
+.meet-maye-copy h2 { font-size: clamp(45px, 5.5vw, 78px); margin-bottom: 25px; }
+.meet-maye-copy p:not(.eyebrow) { max-width: 430px; font-size: 14px; line-height: 1.95; color: var(--muted); margin-bottom: 19px; }
+.meet-maye-copy p.meet-maye-lead { font-family: Georgia, serif; font-size: 20px; line-height: 1.6; color: var(--ink); }
+.meet-maye-disciplines { display: flex; flex-wrap: wrap; gap: 10px 20px; list-style: none; padding: 22px 0; margin: 25px 0 20px; border-block: 1px solid var(--line); font-size: 9px; letter-spacing: 1px; color: var(--gold); }
+@media (max-width: 760px) {
+  .meet-maye { grid-template-columns: 1fr; gap: 35px; padding-block: 40px 50px; }
+  .meet-maye-portrait { width: min(100%, 440px); margin-inline: auto; }
+  .meet-maye-copy h2 { font-size: 55px; }
+  .meet-maye-copy p:not(.eyebrow) { max-width: none; }
+  .meet-maye-disciplines { gap: 10px 17px; }
+}
