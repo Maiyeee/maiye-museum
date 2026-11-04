@@ -17,3 +17,5 @@ Vector assets are in public/collections/vector. All ten originals are preserved 
 Additional collection content and the full museum story await direction. Page components are in src/App.jsx; layouts are in src/App.css; shared styles are in src/index.css. Fonts use Google Fonts with local fallbacks.
 
 The homepage and About page include a shared Meet Maye introduction from src/MeetMaye.jsx. The supplied studio portrait is preserved in public/about/maye-portrait.png; 640px and 1086px JPEG copies provide responsive, uncropped images. The section uses the shared theme palette in light and dark mode.
+
+Products appears on the homepage and at #products through the main navigation. src/Products.jsx displays the three supplied product images as an uncropped gallery: pastel bouquets, a garden bouquet, and a flower mirror keychain. Originals and responsive JPEG versions are in public/products; image metadata is in src/productAssets.json. The gallery inherits light and dark themes, and each image links to its original in a new tab.

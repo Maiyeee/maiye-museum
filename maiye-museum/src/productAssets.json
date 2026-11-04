@@ -1,0 +1,47 @@
+﻿{
+    "pastel-bouquets":  {
+                            "variants":  [
+                                             {
+                                                 "file":  "pastel-bouquets-640.jpg",
+                                                 "width":  640
+                                             },
+                                             {
+                                                 "file":  "pastel-bouquets-736.jpg",
+                                                 "width":  736
+                                             }
+                                         ],
+                            "original":  "pastel-bouquets.jpg",
+                            "width":  736,
+                            "height":  838
+                        },
+    "floral-bouquet":  {
+                           "variants":  [
+                                            {
+                                                "file":  "floral-bouquet-640.jpg",
+                                                "width":  640
+                                            },
+                                            {
+                                                "file":  "floral-bouquet-735.jpg",
+                                                "width":  735
+                                            }
+                                        ],
+                           "original":  "floral-bouquet.jpg",
+                           "width":  735,
+                           "height":  997
+                       },
+    "flower-mirror-keychain":  {
+                                   "variants":  [
+                                                    {
+                                                        "file":  "flower-mirror-keychain-640.jpg",
+                                                        "width":  640
+                                                    },
+                                                    {
+                                                        "file":  "flower-mirror-keychain-1086.jpg",
+                                                        "width":  1086
+                                                    }
+                                                ],
+                                   "original":  "flower-mirror-keychain.png",
+                                   "width":  1086,
+                                   "height":  1448
+                               }
+}
