@@ -184,3 +184,12 @@
   .unwind-gallery { grid-template-columns: 1fr; gap: 45px; }
   .unwind-moment { width: min(100%, 440px); margin-inline: auto; }
 }
+
+/* Sunset shares the museum photo treatment and has its own four-image screen. */
+.sunset-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 55px 40px; }
+@media (min-width: 761px) and (max-width: 1050px) {
+  .navigation { gap: 18px; }
+}
+@media (max-width: 760px) {
+  .sunset-gallery { grid-template-columns: 1fr; gap: 45px; }
+}
