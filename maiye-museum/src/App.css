@@ -156,3 +156,31 @@
   .products-grid { grid-template-columns: 1fr; gap: 40px; }
   .product-image-link { max-width: 440px; margin-inline: auto; }
 }
+
+/* Unwind is a separate screen; its photographs keep their full compositions. */
+.unwind-page { padding-block: 65px 85px; min-height: 70vh; }
+.unwind-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 50px; }
+.unwind-heading .eyebrow { color: var(--gold); font-size: 14px; letter-spacing: 1.5px; margin-bottom: 22px; }
+.unwind-intro { max-width: 400px; }
+.unwind-intro p { font-size: 16px; line-height: 1.9; color: var(--muted); }
+.unwind-intro .unwind-lead { font-family: Georgia, serif; font-size: 23px; color: var(--ink); line-height: 1.5; margin-bottom: 14px; }
+.unwind-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start; }
+.unwind-moment { margin: 0; min-width: 0; }
+.unwind-image-link { display: block; }
+.unwind-image-link img { display: block; width: 100%; height: auto; }
+.unwind-image-link:hover { outline: 1px solid var(--gold); outline-offset: 5px; }
+.unwind-moment figcaption { border-top: 1px solid var(--line); margin-top: 23px; padding-top: 20px; }
+.unwind-moment h2 { font-size: 32px; line-height: 1.2; }
+.unwind-moment figcaption p { margin-top: 14px; font-size: 16px; line-height: 1.8; color: var(--muted); }
+.unwind-moment .text-link { margin-top: 16px; font-size: 14px; }
+@media (min-width: 761px) and (max-width: 1050px) {
+  .navigation { gap: 24px; }
+}
+@media (max-width: 760px) {
+  .unwind-page { padding-block: 40px 50px; }
+  .unwind-heading { flex-direction: column; align-items: start; gap: 25px; margin-bottom: 35px; }
+  .unwind-heading h1 { font-size: clamp(55px, 12vw, 80px); }
+  .unwind-intro { max-width: none; }
+  .unwind-gallery { grid-template-columns: 1fr; gap: 45px; }
+  .unwind-moment { width: min(100%, 440px); margin-inline: auto; }
+}

@@ -1,0 +1,47 @@
+﻿{
+    "under-the-trees":  {
+                            "variants":  [
+                                             {
+                                                 "file":  "under-the-trees-480.jpg",
+                                                 "width":  480
+                                             },
+                                             {
+                                                 "file":  "under-the-trees-736.jpg",
+                                                 "width":  736
+                                             }
+                                         ],
+                            "original":  "under-the-trees.jpg",
+                            "width":  736,
+                            "height":  1307
+                        },
+    "out-at-sea":  {
+                       "variants":  [
+                                        {
+                                            "file":  "out-at-sea-480.jpg",
+                                            "width":  480
+                                        },
+                                        {
+                                            "file":  "out-at-sea-675.jpg",
+                                            "width":  675
+                                        }
+                                    ],
+                       "original":  "out-at-sea.jpg",
+                       "width":  675,
+                       "height":  1200
+                   },
+    "by-the-shore":  {
+                         "variants":  [
+                                          {
+                                              "file":  "by-the-shore-480.jpg",
+                                              "width":  480
+                                          },
+                                          {
+                                              "file":  "by-the-shore-736.jpg",
+                                              "width":  736
+                                          }
+                                      ],
+                         "original":  "by-the-shore.jpg",
+                         "width":  736,
+                         "height":  1308
+                     }
+}
