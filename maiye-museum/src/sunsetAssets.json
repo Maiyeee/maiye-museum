@@ -1,0 +1,62 @@
+﻿{
+    "amber-horizon":  {
+                          "variants":  [
+                                           {
+                                               "file":  "amber-horizon-480.jpg",
+                                               "width":  480
+                                           },
+                                           {
+                                               "file":  "amber-horizon-736.jpg",
+                                               "width":  736
+                                           }
+                                       ],
+                          "original":  "amber-horizon.jpg",
+                          "width":  736,
+                          "height":  1104
+                      },
+    "evening-promenade":  {
+                              "variants":  [
+                                               {
+                                                   "file":  "evening-promenade-480.jpg",
+                                                   "width":  480
+                                               },
+                                               {
+                                                   "file":  "evening-promenade-736.jpg",
+                                                   "width":  736
+                                               }
+                                           ],
+                              "original":  "evening-promenade.jpg",
+                              "width":  736,
+                              "height":  1309
+                          },
+    "one-last-photograph":  {
+                                "variants":  [
+                                                 {
+                                                     "file":  "one-last-photograph-480.jpg",
+                                                     "width":  480
+                                                 },
+                                                 {
+                                                     "file":  "one-last-photograph-675.jpg",
+                                                     "width":  675
+                                                 }
+                                             ],
+                                "original":  "one-last-photograph.jpg",
+                                "width":  675,
+                                "height":  1200
+                            },
+    "palms-at-dusk":  {
+                          "variants":  [
+                                           {
+                                               "file":  "palms-at-dusk-480.jpg",
+                                               "width":  480
+                                           },
+                                           {
+                                               "file":  "palms-at-dusk-675.jpg",
+                                               "width":  675
+                                           }
+                                       ],
+                          "original":  "palms-at-dusk.jpg",
+                          "width":  675,
+                          "height":  1200
+                      }
+}
