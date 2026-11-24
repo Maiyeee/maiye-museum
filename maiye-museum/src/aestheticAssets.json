@@ -1,0 +1,62 @@
+﻿{
+    "iced-drinks":  {
+                        "variants":  [
+                                         {
+                                             "file":  "iced-drinks-480.jpg",
+                                             "width":  480
+                                         },
+                                         {
+                                             "file":  "iced-drinks-736.jpg",
+                                             "width":  736
+                                         }
+                                     ],
+                        "original":  "iced-drinks.jpg",
+                        "width":  736,
+                        "height":  1308
+                    },
+    "pendant-lights":  {
+                           "variants":  [
+                                            {
+                                                "file":  "pendant-lights-480.jpg",
+                                                "width":  480
+                                            },
+                                            {
+                                                "file":  "pendant-lights-676.jpg",
+                                                "width":  676
+                                            }
+                                        ],
+                           "original":  "pendant-lights.jpg",
+                           "width":  676,
+                           "height":  1200
+                       },
+    "gallery-wall":  {
+                         "variants":  [
+                                          {
+                                              "file":  "gallery-wall-480.jpg",
+                                              "width":  480
+                                          },
+                                          {
+                                              "file":  "gallery-wall-736.jpg",
+                                              "width":  736
+                                          }
+                                      ],
+                         "original":  "gallery-wall.jpg",
+                         "width":  736,
+                         "height":  1307
+                     },
+    "warm-interior":  {
+                          "variants":  [
+                                           {
+                                               "file":  "warm-interior-480.jpg",
+                                               "width":  480
+                                           },
+                                           {
+                                               "file":  "warm-interior-675.jpg",
+                                               "width":  675
+                                           }
+                                       ],
+                          "original":  "warm-interior.jpg",
+                          "width":  675,
+                          "height":  1200
+                      }
+}

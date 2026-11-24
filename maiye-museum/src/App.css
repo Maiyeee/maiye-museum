@@ -193,3 +193,8 @@
 @media (max-width: 760px) {
   .sunset-gallery { grid-template-columns: 1fr; gap: 45px; }
 }
+
+/* Keep the expanded gallery navigation comfortable on smaller desktop screens. */
+@media (min-width: 761px) and (max-width: 1050px) {
+  .navigation { gap: 14px; }
+}
