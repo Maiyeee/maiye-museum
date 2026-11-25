@@ -84,7 +84,7 @@ const Gallery = ({ includeMyself = false }) => (
     {exhibits.map(number => <Card key={number} number={number} />)}
     {includeMyself && (
       <a className="exhibit-card" href="#myself">
-        <div className="artwork myself-frame" aria-hidden="true" />
+        <div className="artwork myself-frame"><img src="/myself/myself-1.jpg" width="1920" height="1080" loading="lazy" alt="Maye smiling in a close-up portrait." /></div>
         <div className="card-caption"><h3>Myself</h3></div>
         <p className="card-note">Personal photos</p>
       </a>
