@@ -198,3 +198,16 @@
 @media (min-width: 761px) and (max-width: 1050px) {
   .navigation { gap: 14px; }
 }
+
+/* Food keeps every photo intact, with a responsive gallery for seven images. */
+.food-gallery { gap: 50px 32px; }
+@media (min-width: 1051px) {
+  .food-gallery>.food-scene:last-child { grid-column: 2; }
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .food-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .navigation { gap: 12px; }
+}
+@media (max-width: 760px) {
+  .food-gallery { grid-template-columns: 1fr; gap: 45px; }
+}

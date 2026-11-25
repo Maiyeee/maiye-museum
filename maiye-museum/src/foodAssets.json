@@ -1,0 +1,107 @@
+﻿{
+    "cafe-table":  {
+                       "variants":  [
+                                        {
+                                            "file":  "cafe-table-480.jpg",
+                                            "width":  480
+                                        },
+                                        {
+                                            "file":  "cafe-table-675.jpg",
+                                            "width":  675
+                                        }
+                                    ],
+                       "original":  "cafe-table.jpg",
+                       "width":  675,
+                       "height":  1200
+                   },
+    "ramen-for-two":  {
+                          "variants":  [
+                                           {
+                                               "file":  "ramen-for-two-480.jpg",
+                                               "width":  480
+                                           },
+                                           {
+                                               "file":  "ramen-for-two-736.jpg",
+                                               "width":  736
+                                           }
+                                       ],
+                          "original":  "ramen-for-two.jpg",
+                          "width":  736,
+                          "height":  1288
+                      },
+    "crab-in-sauce":  {
+                          "variants":  [
+                                           {
+                                               "file":  "crab-in-sauce-480.jpg",
+                                               "width":  480
+                                           },
+                                           {
+                                               "file":  "crab-in-sauce-736.jpg",
+                                               "width":  736
+                                           }
+                                       ],
+                          "original":  "crab-in-sauce.jpg",
+                          "width":  736,
+                          "height":  981
+                      },
+    "chicken-and-eggs":  {
+                             "variants":  [
+                                              {
+                                                  "file":  "chicken-and-eggs-480.jpg",
+                                                  "width":  480
+                                              },
+                                              {
+                                                  "file":  "chicken-and-eggs-675.jpg",
+                                                  "width":  675
+                                              }
+                                          ],
+                             "original":  "chicken-and-eggs.jpg",
+                             "width":  675,
+                             "height":  1200
+                         },
+    "sauteed-greens":  {
+                           "variants":  [
+                                            {
+                                                "file":  "sauteed-greens-480.jpg",
+                                                "width":  480
+                                            },
+                                            {
+                                                "file":  "sauteed-greens-736.jpg",
+                                                "width":  736
+                                            }
+                                        ],
+                           "original":  "sauteed-greens.jpg",
+                           "width":  736,
+                           "height":  1307
+                       },
+    "golden-bites":  {
+                         "variants":  [
+                                          {
+                                              "file":  "golden-bites-480.jpg",
+                                              "width":  480
+                                          },
+                                          {
+                                              "file":  "golden-bites-736.jpg",
+                                              "width":  736
+                                          }
+                                      ],
+                         "original":  "golden-bites.jpg",
+                         "width":  736,
+                         "height":  1308
+                     },
+    "saucy-shrimp":  {
+                         "variants":  [
+                                          {
+                                              "file":  "saucy-shrimp-480.jpg",
+                                              "width":  480
+                                          },
+                                          {
+                                              "file":  "saucy-shrimp-736.jpg",
+                                              "width":  736
+                                          }
+                                      ],
+                         "original":  "saucy-shrimp.jpg",
+                         "width":  736,
+                         "height":  1104
+                     }
+}

@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import Food from './Food'
 import Aesthetic from './Aesthetic'
 import Sunset from './Sunset'
 import Unwind from './Unwind'
@@ -11,7 +12,7 @@ import VectorExhibit, { VectorImage } from './VectorExhibit'
 const exhibits = ['01', '02', '03']
 const getRoute = () => {
   const route = window.location.hash.slice(1)
-  return ['collections', 'products', 'unwind', 'sunset', 'aesthetic', 'about', ...exhibits.map(id => `exhibit-${id}`)].includes(route) ? route : 'home'
+  return ['collections', 'products', 'unwind', 'sunset', 'aesthetic', 'food', 'about', ...exhibits.map(id => `exhibit-${id}`)].includes(route) ? route : 'home'
 }
 const Arrow = () => <span aria-hidden="true">↗</span>
 const indesignPath = '/collections/indesign/'
@@ -165,6 +166,7 @@ function App() {
       unwind: 'Unwind',
       sunset: 'Sunset',
       aesthetic: 'Aesthetic',
+      food: 'Food',
       about: 'About the Museum',
       'exhibit-01': 'Marielle — InDesign',
       'exhibit-02': 'Color & Perspective — Raster Graphics',
@@ -173,6 +175,6 @@ function App() {
     document.title = `${title} — Maiye Museum`
   }, [route])
   const active = route.startsWith('exhibit-') ? 'collections' : route
-  return <><a href="#main-content" className="skip-link">Skip to content</a><header className="site-header shell"><a href="#home" className="wordmark" aria-label="Maiye Museum home">maiye<span>MUSEUM</span></a><nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">{[['home', 'Home'], ['collections', 'Collections'], ['products', 'Products'], ['unwind', 'Unwind'], ['sunset', 'Sunset'], ['aesthetic', 'Aesthetic'], ['about', 'About']].map(([key, label]) => <a key={key} href={`#${key}`} aria-current={active === key ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><ThemeToggle /><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button></div></header><main id="main-content" tabIndex={-1}>{route === 'home' ? <Home /> : route === 'collections' ? <Collections /> : route === 'products' ? <Products standalone /> : route === 'unwind' ? <Unwind /> : route === 'sunset' ? <Sunset /> : route === 'aesthetic' ? <Aesthetic /> : route === 'about' ? <About /> : <Exhibit number={route.slice(-2)} />}</main><footer className="site-footer shell"><a className="wordmark" href="#home">maiye<span>MUSEUM</span></a><p>A little wonder. A lasting impression.</p><span>© {new Date().getFullYear()} Maiye Museum</span><a href="#collections">Explore <Arrow /></a></footer></>
+  return <><a href="#main-content" className="skip-link">Skip to content</a><header className="site-header shell"><a href="#home" className="wordmark" aria-label="Maiye Museum home">maiye<span>MUSEUM</span></a><nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">{[['home', 'Home'], ['collections', 'Collections'], ['products', 'Products'], ['unwind', 'Unwind'], ['sunset', 'Sunset'], ['aesthetic', 'Aesthetic'], ['food', 'Food'], ['about', 'About']].map(([key, label]) => <a key={key} href={`#${key}`} aria-current={active === key ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><ThemeToggle /><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button></div></header><main id="main-content" tabIndex={-1}>{route === 'home' ? <Home /> : route === 'collections' ? <Collections /> : route === 'products' ? <Products standalone /> : route === 'unwind' ? <Unwind /> : route === 'sunset' ? <Sunset /> : route === 'aesthetic' ? <Aesthetic /> : route === 'food' ? <Food /> : route === 'about' ? <About /> : <Exhibit number={route.slice(-2)} />}</main><footer className="site-footer shell"><a className="wordmark" href="#home">maiye<span>MUSEUM</span></a><p>A little wonder. A lasting impression.</p><span>© {new Date().getFullYear()} Maiye Museum</span><a href="#collections">Explore <Arrow /></a></footer></>
 }
 export default App
