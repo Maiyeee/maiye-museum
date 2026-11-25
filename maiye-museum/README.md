@@ -27,3 +27,5 @@ Sunset has its own screen at #sunset and a main navigation link. src/Sunset.jsx 
 Aesthetic has its own screen at #aesthetic and a main navigation link. src/Aesthetic.jsx displays the four supplied images of iced drinks, pendant lighting, a gallery wall, and a warm interior. It uses the shared photo gallery styles and light/dark themes, with uncropped images and links to originals. Assets are in public/aesthetic and metadata is in src/aestheticAssets.json.
 
 Food has its own screen at #food and a main navigation link. src/Food.jsx displays all seven supplied food images, with captions and links to full-resolution originals. The responsive gallery uses three columns on desktop, two on smaller desktop screens, and one on mobile, and inherits light and dark themes. Originals and responsive copies are in public/food; metadata is in src/foodAssets.json.
+
+Beach is a blank screen at #beach, reached through the Beach navigation link. src/Beach.jsx shows only its heading inside the shared site layout, ready for future content.
