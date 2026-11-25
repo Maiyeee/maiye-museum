@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import Myself from './Myself'
 import Beach from './Beach'
 import Food from './Food'
 import Aesthetic from './Aesthetic'
@@ -13,7 +14,7 @@ import VectorExhibit, { VectorImage } from './VectorExhibit'
 const exhibits = ['01', '02', '03']
 const getRoute = () => {
   const route = window.location.hash.slice(1)
-  return ['collections', 'products', 'unwind', 'sunset', 'aesthetic', 'food', 'beach', 'about', ...exhibits.map(id => `exhibit-${id}`)].includes(route) ? route : 'home'
+  return ['collections', 'myself', 'products', 'unwind', 'sunset', 'aesthetic', 'food', 'beach', 'about', ...exhibits.map(id => `exhibit-${id}`)].includes(route) ? route : 'home'
 }
 const Arrow = () => <span aria-hidden="true">↗</span>
 const indesignPath = '/collections/indesign/'
@@ -78,12 +79,30 @@ function Card({ number }) {
   )
   return <a className="exhibit-card" href="#exhibit-03"><Artwork number="03" /><div className="card-caption"><div><p className="eyebrow">EXHIBIT 03 · VECTOR GRAPHICS</p><h3>Modern beauty</h3></div><span className="circle-arrow"><Arrow /></span></div><p className="card-note">Marielle brand identity & design studies</p></a>
 }
-const Gallery = () => <div className="gallery-grid">{exhibits.map(number => <Card key={number} number={number} />)}</div>
+const Gallery = ({ includeMyself = false }) => (
+  <div className="gallery-grid">
+    {exhibits.map(number => <Card key={number} number={number} />)}
+    {includeMyself && (
+      <a className="exhibit-card" href="#myself">
+        <div className="artwork myself-frame" aria-hidden="true" />
+        <div className="card-caption"><h3>Myself</h3></div>
+        <p className="card-note">Personal photos</p>
+      </a>
+    )}
+  </div>
+)
 function Home() {
   return <><section className="home-hero shell"><div className="hero-copy"><p className="eyebrow"><span className="tiny-star">✳</span> A SPACE FOR DISCOVERY</p><h1>Every piece.<br />A <em>world</em><br />within.</h1><p className="intro">An invitation to pause, look closer, and discover the stories held within a collection.</p><a href="#collections" className="button">Explore the collection <Arrow /></a><p className="hero-footnote"><span /> Take your time. There is much to discover.</p></div><div className="hero-display"><div className="display-top"><span>THE MAIYE COLLECTION</span><span>NO. 001</span></div><Artwork hero /><div className="display-caption"><span>Marielle — Personal Edition.</span><i>InDesign · September 2026</i></div></div></section><div className="invitation"><span>LOOK CLOSELY</span><b aria-hidden="true">✳</b><span>WONDER FREELY</span><b aria-hidden="true">✳</b><span>STAY A LITTLE LONGER</span></div><section className="shell collection-section"><div className="section-heading"><div><p className="eyebrow">THE GALLERY</p><h2>Room for <em>discovery.</em></h2></div><a className="text-link" href="#collections">View the collection <Arrow /></a></div><Gallery /></section><MeetMaye /><section className="about-strip shell"><span className="large-star" aria-hidden="true">✳</span><div><p className="eyebrow">BEYOND THE FRAME</p><h2>Some things deserve<br />a closer <em>look.</em></h2></div><div><p>A museum is a space to be curious. Here, each piece will have room to breathe, and every story a place to unfold.</p><a className="text-link" href="#about">About the museum <Arrow /></a></div></section></>
 }
 function Collections() {
-  return <section className="shell inner-page"><div className="page-intro"><p className="eyebrow">EXPLORE AT YOUR OWN PACE</p><h1>The <em>collection.</em></h1><p className="intro">A gallery of stories, waiting to unfold. Choose an exhibit to step inside.</p></div><div className="gallery-toolbar"><span>ALL EXHIBITS</span><span>03 EXHIBITS</span></div><Gallery /><p className="collection-notice">Explore three rooms: InDesign, Raster Graphics, and Vector Graphics.</p></section>
+  return (
+    <section className="shell inner-page">
+      <div className="page-intro"><p className="eyebrow">EXPLORE AT YOUR OWN PACE</p><h1>The <em>collection.</em></h1><p className="intro">A gallery of stories, waiting to unfold. Choose a collection to step inside.</p></div>
+      <div className="gallery-toolbar"><span>ALL COLLECTIONS</span><span>04 COLLECTIONS</span></div>
+      <Gallery includeMyself />
+      <p className="collection-notice">Explore InDesign, Raster Graphics, Vector Graphics, and Myself.</p>
+    </section>
+  )
 }
 function About() {
   return <><section className="shell inner-page about-page"><div className="page-intro"><p className="eyebrow">THE IDEA BEHIND THE SPACE</p><h1>A place to<br /><em>look closer.</em></h1><p className="intro">Welcome to Maiye Museum, a digital space for a collection and the stories it will hold.</p></div><div className="about-story"><span className="large-star" aria-hidden="true">✳</span><h2>Made for<br /><em>curiosity.</em></h2><p>Walk through the gallery at your own pace. Spend a moment with a piece, open its story, and follow your curiosity to the next.</p><p>This museum is still taking shape. The story behind its collection will find its home here.</p><a className="text-link" href="#collections">Step into the gallery <Arrow /></a></div></section><MeetMaye /></>
@@ -163,6 +182,7 @@ function App() {
     const title = {
       home: 'A World Within',
       collections: 'The Collection',
+      myself: 'Myself',
       products: 'Products',
       unwind: 'Unwind',
       sunset: 'Sunset',
@@ -176,7 +196,7 @@ function App() {
     }[route] ?? `Exhibit ${route.slice(-2)}`
     document.title = `${title} — Maiye Museum`
   }, [route])
-  const active = route.startsWith('exhibit-') ? 'collections' : route
-  return <><a href="#main-content" className="skip-link">Skip to content</a><header className="site-header shell"><a href="#home" className="wordmark" aria-label="Maiye Museum home">maiye<span>MUSEUM</span></a><nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">{[['home', 'Home'], ['collections', 'Collections'], ['products', 'Products'], ['unwind', 'Unwind'], ['sunset', 'Sunset'], ['aesthetic', 'Aesthetic'], ['food', 'Food'], ['beach', 'Beach'], ['about', 'About']].map(([key, label]) => <a key={key} href={`#${key}`} aria-current={active === key ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><ThemeToggle /><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button></div></header><main id="main-content" tabIndex={-1}>{route === 'home' ? <Home /> : route === 'collections' ? <Collections /> : route === 'products' ? <Products standalone /> : route === 'unwind' ? <Unwind /> : route === 'sunset' ? <Sunset /> : route === 'aesthetic' ? <Aesthetic /> : route === 'food' ? <Food /> : route === 'beach' ? <Beach /> : route === 'about' ? <About /> : <Exhibit number={route.slice(-2)} />}</main><footer className="site-footer shell"><a className="wordmark" href="#home">maiye<span>MUSEUM</span></a><p>A little wonder. A lasting impression.</p><span>© {new Date().getFullYear()} Maiye Museum</span><a href="#collections">Explore <Arrow /></a></footer></>
+  const active = route === 'myself' || route.startsWith('exhibit-') ? 'collections' : route
+  return <><a href="#main-content" className="skip-link">Skip to content</a><header className="site-header shell"><a href="#home" className="wordmark" aria-label="Maiye Museum home">maiye<span>MUSEUM</span></a><nav id="main-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">{[['home', 'Home'], ['collections', 'Collections'], ['products', 'Products'], ['unwind', 'Unwind'], ['sunset', 'Sunset'], ['aesthetic', 'Aesthetic'], ['food', 'Food'], ['beach', 'Beach'], ['about', 'About']].map(([key, label]) => <a key={key} href={`#${key}`} aria-current={active === key ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><ThemeToggle /><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button></div></header><main id="main-content" tabIndex={-1}>{route === 'home' ? <Home /> : route === 'collections' ? <Collections /> : route === 'myself' ? <Myself /> : route === 'products' ? <Products standalone /> : route === 'unwind' ? <Unwind /> : route === 'sunset' ? <Sunset /> : route === 'aesthetic' ? <Aesthetic /> : route === 'food' ? <Food /> : route === 'beach' ? <Beach /> : route === 'about' ? <About /> : <Exhibit number={route.slice(-2)} />}</main><footer className="site-footer shell"><a className="wordmark" href="#home">maiye<span>MUSEUM</span></a><p>A little wonder. A lasting impression.</p><span>© {new Date().getFullYear()} Maiye Museum</span><a href="#collections">Explore <Arrow /></a></footer></>
 }
 export default App
