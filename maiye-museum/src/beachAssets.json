@@ -1,0 +1,32 @@
+﻿{
+    "shaded-shore":  {
+                         "variants":  [
+                                          {
+                                              "file":  "shaded-shore-480.jpg",
+                                              "width":  480
+                                          },
+                                          {
+                                              "file":  "shaded-shore-736.jpg",
+                                              "width":  736
+                                          }
+                                      ],
+                         "original":  "shaded-shore.jpg",
+                         "width":  736,
+                         "height":  1308
+                     },
+    "seaside-shelter":  {
+                            "variants":  [
+                                             {
+                                                 "file":  "seaside-shelter-480.jpg",
+                                                 "width":  480
+                                             },
+                                             {
+                                                 "file":  "seaside-shelter-736.jpg",
+                                                 "width":  736
+                                             }
+                                         ],
+                            "original":  "seaside-shelter.jpg",
+                            "width":  736,
+                            "height":  981
+                        }
+}

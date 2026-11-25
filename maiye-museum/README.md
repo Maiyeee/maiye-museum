@@ -28,4 +28,4 @@ Aesthetic has its own screen at #aesthetic and a main navigation link. src/Aesth
 
 Food has its own screen at #food and a main navigation link. src/Food.jsx displays all seven supplied food images, with captions and links to full-resolution originals. The responsive gallery uses three columns on desktop, two on smaller desktop screens, and one on mobile, and inherits light and dark themes. Originals and responsive copies are in public/food; metadata is in src/foodAssets.json.
 
-Beach is a blank screen at #beach, reached through the Beach navigation link. src/Beach.jsx shows only its heading inside the shared site layout, ready for future content.
+Beach has its own screen at #beach, reached through the Beach navigation link. src/Beach.jsx displays the two supplied beach photographs without cropping, with captions and links to the originals. Assets are in public/beach and metadata is in src/beachAssets.json. The gallery uses two columns on larger screens and one on mobile and follows the shared light and dark themes.
